@@ -31,6 +31,12 @@ class createPostForm(Form):
     postTags = StringField(
         "Post Tags", [validators.InputRequired()], render_kw={"placeholder": "tags"}
     )
+    postMonth = StringField(
+        "Post Month", [validators.InputRequired()], render_kw={"placeholder": "Month"}
+    )
+    postBook = StringField(
+        "Post Book", [validators.InputRequired()], render_kw={"placeholder": "Book name"}
+    )
     postContent = TextAreaField(
         "Post Content",
         [validators.Length(min=50)],

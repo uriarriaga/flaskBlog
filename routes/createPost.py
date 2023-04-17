@@ -23,7 +23,7 @@ def createPost():
             form = createPostForm(request.form)
             if request.method == "POST":
                 postTitle = request.form["postTitle"]
-                postTags = request.form["postTags"]
+                postMonth = request.form["postMonth"]
                 postContent = request.form["postContent"]
                 match postContent == "":
                     case True:
@@ -37,8 +37,8 @@ def createPost():
                         cursor = connection.cursor()
                         cursor.execute(
                             f"""
-                            insert into posts(title,tags,content,author,views,date,time,lastEditDate,lastEditTime) 
-                            values("{postTitle}","{postTags}","{postContent}",
+                            insert into posts(title,month,content,author,views,date,time,lastEditDate,lastEditTime) 
+                            values("{postTitle}","{postMonth}","{postContent}",
                             "{session["userName"]}",0,
                             "{currentDate()}",
                             "{currentTime()}",

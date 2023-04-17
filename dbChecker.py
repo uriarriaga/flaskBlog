@@ -65,7 +65,7 @@ def postsTable():
         CREATE TABLE "posts" (
     	"id"	INTEGER NOT NULL UNIQUE,
     	"title"	TEXT NOT NULL,
-    	"tags"	TEXT,
+    	"month"	TEXT,
     	"content"	TEXT NOT NULL,
     	"author"	TEXT NOT NULL,
     	"date"	TEXT NOT NULL,
